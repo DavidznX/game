@@ -9,6 +9,10 @@ atirar
 recarregar 
 
 
+
+
+
+
 SISTEMAS BASICOS GERAIS:
 
 vida
@@ -22,6 +26,10 @@ movimentação
 etc...
 
 
+
+
+
+
 SISTEMA DE VEICULOS:
 
 entrar em carros
@@ -33,6 +41,9 @@ dirigir
 moimentação  de veiculos
 
 
+
+
+
 SISTEMA DE COMBATE COM ARMAS BRANCAS:
 
 espadas 
@@ -40,6 +51,9 @@ espadas
 lanças 
 
 etc...
+
+
+
 
 SISTEMA DE HABILIDADES E PODERES ESPECIAIS:
 
@@ -55,9 +69,16 @@ vazio roxo
 
 
 
+
+
+
 ESSAS SÃO ALGUMAS DAS COISAS CONTIDAS, BASICAMENTE MUITAS MECANICAS MESCLADAS EM UM LUGAR SÓ, O JOGO CONSISTE EM 
 ANDAR PELO MAPA MONTANDO SUAS BUILDS COM OQUE O JOGO COLOCA AO SEU DISPOR
 NESSE MAPA INIMIGOS IRÃO TE ATACAR E VOCÊ TERA QUE REVIDAR.
+
+
+
+
 
 
 CREDITOS:
