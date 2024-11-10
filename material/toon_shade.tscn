@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkifq7q21tcr"]
+
+[ext_resource type="Material" uid="uid://tgrl3b7fqmjv" path="res://assets/material/toon_shadding.tres" id="1_eykbb"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_62l0d"]
+material = ExtResource("1_eykbb")
+
+[node name="toon shade" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_62l0d")
