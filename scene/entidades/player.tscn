@@ -1,9 +1,9 @@
-[gd_scene load_steps=39 format=4 uid="uid://nso7qnrjj5xh"]
+[gd_scene load_steps=69 format=4 uid="uid://pm8yd1wjid1q"]
 
-[ext_resource type="Script" path="res://scripts/camera_movement.gd" id="1_2j4ex"]
-[ext_resource type="Script" path="res://scripts/player/player_movement.gd" id="1_5gedq"]
+[ext_resource type="Script" path="res://scripts/player/player_movement.gd" id="1_mwdo6"]
+[ext_resource type="Script" path="res://scripts/camera_movement.gd" id="2_6b41x"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x87e8"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_12yhg"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3waqb"]
 load_path = "res://.godot/imported/player_0.png-099acc1442f0e3248ed6e00876e2dc82.ctex"
@@ -18,7 +18,7 @@ albedo_texture = SubResource("CompressedTexture2D_3waqb")
 texture_filter = 0
 texture_repeat = false
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_cnr3m"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_7dsm1"]
 _surfaces = [{
 "aabb": AABB(-0.25, 1.5, -0.25, 0.5, 0.5, 0.5),
 "format": 34896613377,
@@ -32,7 +32,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_s2pph"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_iexxd"]
 resource_name = "blockbench_export_mesh"
 _surfaces = [{
 "aabb": AABB(-0.25, 1.5, -0.25, 0.5, 0.5, 0.5),
@@ -48,9 +48,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_cnr3m")
+shadow_mesh = SubResource("ArrayMesh_7dsm1")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_7j80i"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_oc38q"]
 _surfaces = [{
 "aabb": AABB(-0.28125, 1.46875, -0.28125, 0.5625, 0.5625, 0.5625),
 "format": 34896613377,
@@ -64,7 +64,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_60huh"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_36cex"]
 resource_name = "blockbench_export_mesh2"
 _surfaces = [{
 "aabb": AABB(-0.28125, 1.46875, -0.28125, 0.5625, 0.5625, 0.5625),
@@ -80,9 +80,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_7j80i")
+shadow_mesh = SubResource("ArrayMesh_oc38q")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_wfp4a"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_en7md"]
 _surfaces = [{
 "aabb": AABB(-0.25, 0.75, -0.125, 0.5, 0.75, 0.25),
 "format": 34896613377,
@@ -96,7 +96,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_bqq8f"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_vf0b6"]
 resource_name = "blockbench_export_mesh3"
 _surfaces = [{
 "aabb": AABB(-0.25, 0.75, -0.125, 0.5, 0.75, 0.25),
@@ -112,9 +112,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_wfp4a")
+shadow_mesh = SubResource("ArrayMesh_en7md")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_goohm"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_hv16i"]
 _surfaces = [{
 "aabb": AABB(-0.265625, 0.734375, -0.140625, 0.53125, 0.78125, 0.28125),
 "format": 34896613377,
@@ -128,7 +128,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_gghst"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_dp5na"]
 resource_name = "blockbench_export_mesh4"
 _surfaces = [{
 "aabb": AABB(-0.265625, 0.734375, -0.140625, 0.53125, 0.78125, 0.28125),
@@ -144,9 +144,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_goohm")
+shadow_mesh = SubResource("ArrayMesh_hv16i")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_7beit"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_o6qmh"]
 _surfaces = [{
 "aabb": AABB(0.25, 0.75, -0.125, 0.25, 0.75, 0.25),
 "format": 34896613377,
@@ -160,7 +160,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_3w2u7"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_uak4u"]
 resource_name = "blockbench_export_mesh5"
 _surfaces = [{
 "aabb": AABB(0.25, 0.75, -0.125, 0.25, 0.75, 0.25),
@@ -176,9 +176,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_7beit")
+shadow_mesh = SubResource("ArrayMesh_o6qmh")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_djck5"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_yqnm2"]
 _surfaces = [{
 "aabb": AABB(0.234375, 0.734375, -0.140625, 0.28125, 0.78125, 0.28125),
 "format": 34896613377,
@@ -192,7 +192,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_jn7xf"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_o0s6g"]
 resource_name = "blockbench_export_mesh6"
 _surfaces = [{
 "aabb": AABB(0.234375, 0.734375, -0.140625, 0.28125, 0.78125, 0.28125),
@@ -208,9 +208,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_djck5")
+shadow_mesh = SubResource("ArrayMesh_yqnm2")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_cbeso"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_u4fpf"]
 _surfaces = [{
 "aabb": AABB(-0.5, 0.75, -0.125, 0.25, 0.75, 0.25),
 "format": 34896613377,
@@ -224,7 +224,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_1tfns"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ccbwl"]
 resource_name = "blockbench_export_mesh7"
 _surfaces = [{
 "aabb": AABB(-0.5, 0.75, -0.125, 0.25, 0.75, 0.25),
@@ -240,9 +240,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_cbeso")
+shadow_mesh = SubResource("ArrayMesh_u4fpf")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_rhwo0"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_4ow3u"]
 _surfaces = [{
 "aabb": AABB(-0.515625, 0.734375, -0.140625, 0.28125, 0.78125, 0.28125),
 "format": 34896613377,
@@ -256,7 +256,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_sls1r"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_jjsut"]
 resource_name = "blockbench_export_mesh8"
 _surfaces = [{
 "aabb": AABB(-0.515625, 0.734375, -0.140625, 0.28125, 0.78125, 0.28125),
@@ -272,9 +272,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_rhwo0")
+shadow_mesh = SubResource("ArrayMesh_4ow3u")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_2aaqt"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_qwi4r"]
 _surfaces = [{
 "aabb": AABB(-0.00625, 0, -0.125, 0.25, 0.75, 0.25),
 "format": 34896613377,
@@ -288,7 +288,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_4iqmj"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_jjgyp"]
 resource_name = "blockbench_export_mesh9"
 _surfaces = [{
 "aabb": AABB(-0.00625, 0, -0.125, 0.25, 0.75, 0.25),
@@ -304,9 +304,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_2aaqt")
+shadow_mesh = SubResource("ArrayMesh_qwi4r")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_gsa2n"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_8xonx"]
 _surfaces = [{
 "aabb": AABB(-0.021875, -0.015625, -0.140625, 0.28125, 0.78125, 0.28125),
 "format": 34896613377,
@@ -320,7 +320,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_xb58s"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_lvqra"]
 resource_name = "blockbench_export_mesh10"
 _surfaces = [{
 "aabb": AABB(-0.021875, -0.015625, -0.140625, 0.28125, 0.78125, 0.28125),
@@ -336,9 +336,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_gsa2n")
+shadow_mesh = SubResource("ArrayMesh_8xonx")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_063uy"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ik8ki"]
 _surfaces = [{
 "aabb": AABB(-0.24375, 0, -0.125, 0.25, 0.75, 0.25),
 "format": 34896613377,
@@ -352,7 +352,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_obr5d"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_vl8im"]
 resource_name = "blockbench_export_mesh11"
 _surfaces = [{
 "aabb": AABB(-0.24375, 0, -0.125, 0.25, 0.75, 0.25),
@@ -368,9 +368,9 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_063uy")
+shadow_mesh = SubResource("ArrayMesh_ik8ki")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_qs423"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_0stja"]
 _surfaces = [{
 "aabb": AABB(-0.259375, -0.015625, -0.140625, 0.28125, 0.78125, 0.28125),
 "format": 34896613377,
@@ -384,7 +384,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_mwpaq"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_hlync"]
 resource_name = "blockbench_export_mesh12"
 _surfaces = [{
 "aabb": AABB(-0.259375, -0.015625, -0.140625, 0.28125, 0.78125, 0.28125),
@@ -400,7 +400,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////////7//////AAD/v///AAD///+///8AAAAA/78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAA////vwAA//8AAP///////wAA//8AAP//////////////////AAAAAP//AAD//wAA//8AAAAAAAAAAAAA//8AAAAAAAAAAP////8AgP///////wCAAAAAAP//AID//wAA//8AgP////8AAP//AAD//wAA/////wAAAAD//wAAAAAAAP///38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f/+//3//v/9//7//f/+//3//P/9//z//f/8//3//P/9/////f////3////9/////f////3////9/////f///")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_qs423")
+shadow_mesh = SubResource("ArrayMesh_0stja")
 
 [sub_resource type="Animation" id="Animation_ghrwy"]
 resource_name = "death"
@@ -763,36 +763,164 @@ _data = {
 "walking": SubResource("Animation_6fhk6")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4vg3t"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2qded"]
 animation = &"idle"
-use_custom_timeline = true
-timeline_length = 1.0
-stretch_time_scale = true
-start_offset = 0.0
-loop_mode = 0
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ou3n4"]
-animation = &"run"
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_n5tnh"]
+animation = &"idle"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wkndq"]
-animation = &"run"
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_47lef"]
+animation = &"idle"
 
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_ts60a"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_4vg3t")
-blend_point_0/pos = 0.0
-blend_point_1/node = SubResource("AnimationNodeAnimation_ou3n4")
-blend_point_1/pos = -1.0
-blend_point_2/node = SubResource("AnimationNodeAnimation_wkndq")
-blend_point_2/pos = 1.0
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_b3x2p"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nufsh"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mek6i"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4gkdg"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_j2ohg"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_6a4wk"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_2qded")
+blend_point_0/pos = Vector2(0, -0.9)
+blend_point_1/node = SubResource("AnimationNodeAnimation_n5tnh")
+blend_point_1/pos = Vector2(0, 1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_47lef")
+blend_point_2/pos = Vector2(-1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_b3x2p")
+blend_point_3/pos = Vector2(1, 0)
+blend_point_4/node = SubResource("AnimationNodeAnimation_nufsh")
+blend_point_4/pos = Vector2(1, 1)
+blend_point_5/node = SubResource("AnimationNodeAnimation_mek6i")
+blend_point_5/pos = Vector2(1, -0.9)
+blend_point_6/node = SubResource("AnimationNodeAnimation_4gkdg")
+blend_point_6/pos = Vector2(-1, -0.9)
+blend_point_7/node = SubResource("AnimationNodeAnimation_j2ohg")
+blend_point_7/pos = Vector2(-1, 1)
 blend_mode = 1
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t4wyj"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x6pr5"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_atiro"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mky7a"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v73tl"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_676s5"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5bkxq"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p8rw3"]
+animation = &"run"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_63d5p"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_t4wyj")
+blend_point_0/pos = Vector2(0, 0.9)
+blend_point_1/node = SubResource("AnimationNodeAnimation_x6pr5")
+blend_point_1/pos = Vector2(0, -0.9)
+blend_point_2/node = SubResource("AnimationNodeAnimation_atiro")
+blend_point_2/pos = Vector2(1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_mky7a")
+blend_point_3/pos = Vector2(-1, 0.1)
+blend_point_4/node = SubResource("AnimationNodeAnimation_v73tl")
+blend_point_4/pos = Vector2(-1, 1)
+blend_point_5/node = SubResource("AnimationNodeAnimation_676s5")
+blend_point_5/pos = Vector2(-1, -0.9)
+blend_point_6/node = SubResource("AnimationNodeAnimation_5bkxq")
+blend_point_6/pos = Vector2(1, 1)
+blend_point_7/node = SubResource("AnimationNodeAnimation_p8rw3")
+blend_point_7/pos = Vector2(1, -1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c1pyt"]
+animation = &"walking"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xgf0h"]
+animation = &"walking"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q8n70"]
+animation = &"walking"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v7kx0"]
+animation = &"walking"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_e7o8k"]
+animation = &"walking"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_eb1es"]
+animation = &"walking"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_avgoc"]
+animation = &"walking"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tkgki"]
+animation = &"walking"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_r4m2n"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_c1pyt")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_xgf0h")
+blend_point_1/pos = Vector2(0, -0.9)
+blend_point_2/node = SubResource("AnimationNodeAnimation_q8n70")
+blend_point_2/pos = Vector2(-1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_v7kx0")
+blend_point_3/pos = Vector2(1, 0)
+blend_point_4/node = SubResource("AnimationNodeAnimation_e7o8k")
+blend_point_4/pos = Vector2(1, 1)
+blend_point_5/node = SubResource("AnimationNodeAnimation_eb1es")
+blend_point_5/pos = Vector2(1, -0.9)
+blend_point_6/node = SubResource("AnimationNodeAnimation_avgoc")
+blend_point_6/pos = Vector2(-1, 1)
+blend_point_7/node = SubResource("AnimationNodeAnimation_tkgki")
+blend_point_7/pos = Vector2(-1, -1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_35d0e"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_q5muw"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_18fif"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_w2rye"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rv1xu"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kb3nt"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_g0xi3"]
+states/Start/position = Vector2(197.333, 131.407)
+states/idle/node = SubResource("AnimationNodeBlendSpace2D_6a4wk")
+states/idle/position = Vector2(325.333, 131.226)
+states/run/node = SubResource("AnimationNodeBlendSpace2D_63d5p")
+states/run/position = Vector2(460, 99.4529)
+states/walking/node = SubResource("AnimationNodeBlendSpace2D_r4m2n")
+states/walking/position = Vector2(459.556, 200.308)
+transitions = ["idle", "run", SubResource("AnimationNodeStateMachineTransition_35d0e"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_q5muw"), "run", "walking", SubResource("AnimationNodeStateMachineTransition_18fif"), "walking", "run", SubResource("AnimationNodeStateMachineTransition_w2rye"), "idle", "walking", SubResource("AnimationNodeStateMachineTransition_rv1xu"), "walking", "idle", SubResource("AnimationNodeStateMachineTransition_kb3nt")]
+graph_offset = Vector2(0, 48.9746)
+
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("player_mesh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0165, 0)
-script = ExtResource("1_5gedq")
+script = ExtResource("1_mwdo6")
 player_mesh = NodePath("blockbench_export")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CapsuleShape3D_x87e8")
+shape = SubResource("CapsuleShape3D_12yhg")
 
 [node name="blockbench_export" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -804,12 +932,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Head" type="MeshInstance3D" parent="blockbench_export/Node/Head2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
-mesh = SubResource("ArrayMesh_s2pph")
+mesh = SubResource("ArrayMesh_iexxd")
 skeleton = NodePath("")
 
 [node name="Hat Layer" type="MeshInstance3D" parent="blockbench_export/Node/Head2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
-mesh = SubResource("ArrayMesh_60huh")
+mesh = SubResource("ArrayMesh_36cex")
 skeleton = NodePath("")
 
 [node name="Body2" type="Node3D" parent="blockbench_export/Node"]
@@ -817,38 +945,38 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Body" type="MeshInstance3D" parent="blockbench_export/Node/Body2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
-mesh = SubResource("ArrayMesh_bqq8f")
+mesh = SubResource("ArrayMesh_vf0b6")
 skeleton = NodePath("")
 
 [node name="Body Layer" type="MeshInstance3D" parent="blockbench_export/Node/Body2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
-mesh = SubResource("ArrayMesh_gghst")
+mesh = SubResource("ArrayMesh_dp5na")
 skeleton = NodePath("")
 
 [node name="RightArm" type="Node3D" parent="blockbench_export/Node"]
-transform = Transform3D(0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, 0, 0, 1, 0.3125, 1.375, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3125, 1.375, 0)
 
 [node name="Right Arm" type="MeshInstance3D" parent="blockbench_export/Node/RightArm"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3125, -1.375, 0)
-mesh = SubResource("ArrayMesh_3w2u7")
+mesh = SubResource("ArrayMesh_uak4u")
 skeleton = NodePath("")
 
 [node name="Right Arm Layer" type="MeshInstance3D" parent="blockbench_export/Node/RightArm"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3125, -1.375, 0)
-mesh = SubResource("ArrayMesh_jn7xf")
+mesh = SubResource("ArrayMesh_o0s6g")
 skeleton = NodePath("")
 
 [node name="LeftArm" type="Node3D" parent="blockbench_export/Node"]
-transform = Transform3D(0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0, 0, 1, -0.3125, 1.375, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3125, 1.375, 0)
 
 [node name="Left Arm" type="MeshInstance3D" parent="blockbench_export/Node/LeftArm"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3125, -1.375, 0)
-mesh = SubResource("ArrayMesh_1tfns")
+mesh = SubResource("ArrayMesh_ccbwl")
 skeleton = NodePath("")
 
 [node name="Left Arm Layer" type="MeshInstance3D" parent="blockbench_export/Node/LeftArm"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3125, -1.375, 0)
-mesh = SubResource("ArrayMesh_sls1r")
+mesh = SubResource("ArrayMesh_jjsut")
 skeleton = NodePath("")
 
 [node name="RightLeg" type="Node3D" parent="blockbench_export/Node"]
@@ -856,12 +984,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11875, 0.75, 0)
 
 [node name="Right Leg" type="MeshInstance3D" parent="blockbench_export/Node/RightLeg"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11875, -0.75, 0)
-mesh = SubResource("ArrayMesh_4iqmj")
+mesh = SubResource("ArrayMesh_jjgyp")
 skeleton = NodePath("")
 
 [node name="Right Leg Layer" type="MeshInstance3D" parent="blockbench_export/Node/RightLeg"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11875, -0.75, 0)
-mesh = SubResource("ArrayMesh_xb58s")
+mesh = SubResource("ArrayMesh_lvqra")
 skeleton = NodePath("")
 
 [node name="LeftLeg" type="Node3D" parent="blockbench_export/Node"]
@@ -869,12 +997,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11875, 0.75, 0)
 
 [node name="Left Leg" type="MeshInstance3D" parent="blockbench_export/Node/LeftLeg"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11875, -0.75, 0)
-mesh = SubResource("ArrayMesh_obr5d")
+mesh = SubResource("ArrayMesh_vl8im")
 skeleton = NodePath("")
 
 [node name="Left Leg Layer" type="MeshInstance3D" parent="blockbench_export/Node/LeftLeg"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11875, -0.75, 0)
-mesh = SubResource("ArrayMesh_mwpaq")
+mesh = SubResource("ArrayMesh_hlync")
 skeleton = NodePath("")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="blockbench_export"]
@@ -883,7 +1011,7 @@ libraries = {
 }
 
 [node name="camera" type="Node3D" parent="."]
-script = ExtResource("1_2j4ex")
+script = ExtResource("2_6b41x")
 
 [node name="horizontal" type="Node3D" parent="camera"]
 
@@ -898,7 +1026,10 @@ transform = Transform3D(1, 0, 0, 0, 0.930931, 0, 0, 0, 1.48683, 0, 0, 0)
 fov = 87.4756
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+active = false
 root_node = NodePath("../blockbench_export")
-tree_root = SubResource("AnimationNodeBlendSpace1D_ts60a")
+tree_root = SubResource("AnimationNodeStateMachine_g0xi3")
 anim_player = NodePath("../blockbench_export/AnimationPlayer")
-parameters/blend_position = 0.0403397
+parameters/idle/blend_position = Vector2(-0.0022676, 0.00806451)
+parameters/run/blend_position = Vector2(0, 0)
+parameters/walking/blend_position = Vector2(0, 0)

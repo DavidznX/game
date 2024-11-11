@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://d2awo0d1jejmg"]
+[gd_scene load_steps=10 format=3 uid="uid://d2awo0d1jejmg"]
 
 [ext_resource type="MeshLibrary" uid="uid://cusemqvln4ryk" path="res://scene/mesh_library.tres" id="1_t8yuq"]
 [ext_resource type="Texture2D" uid="uid://g4f06tvaxnb7" path="res://skubox/Sprite-0001.png" id="2_i12e8"]
-[ext_resource type="PackedScene" uid="uid://pm8yd1wjid1q" path="res://scene/entidades/player2.tscn" id="4_f4jnc"]
+[ext_resource type="PackedScene" uid="uid://pm8yd1wjid1q" path="res://scene/entidades/player.tscn" id="4_f4jnc"]
 [ext_resource type="PackedScene" uid="uid://0ap2tef4g6oo" path="res://assets/models/constructions/casa1-dois_andares.gltf" id="4_i5q1a"]
 [ext_resource type="PackedScene" uid="uid://5sn3vqcjnlob" path="res://scene/entidades/kurama.tscn" id="5_rohey"]
 
@@ -15,6 +15,8 @@ sky_material = SubResource("PanoramaSkyMaterial_rt0hb")
 [sub_resource type="Environment" id="Environment_a31wk"]
 background_mode = 2
 sky = SubResource("Sky_aekg8")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dw1t5"]
 
 [node name="World" type="Node3D"]
 
@@ -35,8 +37,14 @@ environment = SubResource("Environment_a31wk")
 [node name="blockbench_export" parent="." instance=ExtResource("4_i5q1a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8438, 0, -7.79001)
 
-[node name="teste" parent="." instance=ExtResource("4_f4jnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2.78581, -19)
-
 [node name="Kurama" parent="." instance=ExtResource("5_rohey")]
 transform = Transform3D(-10, 0, -8.74228e-07, 0, 10, 0, 8.74228e-07, 0, -10, -34.1928, 8, -456.838)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.82347, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_dw1t5")
+
+[node name="Player" parent="." instance=ExtResource("4_f4jnc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.2223, 34.1055, -285.327)
