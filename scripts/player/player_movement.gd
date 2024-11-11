@@ -4,14 +4,34 @@ var correndo:bool = false
 var SPEED = 7.0
 var velocidade_atual = SPEED
 const JUMP_VELOCITY = 5
+@export var vida_maxima: float = 10
+@export var vida_atual = vida_maxima
+var morte: bool = false
 @onready var mao_direita: Node3D = $mao_direita
 @onready var animation_tree: AnimationTree = $AnimationTree
+@onready var animation_mode = animation_tree.get("parameters/playback")
+@onready var animation_player: AnimationPlayer = $blockbench_export/AnimationPlayer
 
+
+
+
+func _ready() -> void:
+	animation_tree.active = true
+		
 
 func _physics_process(delta: float) -> void:
+	
+	
+	while  vida_atual == vida_maxima:
+		morte = false
+
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	
+	if morte:
+		set_physics_process(false)
+		animation_player.play("death")
 		
 	if Input.is_action_just_pressed("run") and is_on_floor():
 		velocidade_atual = SPEED * 1.5
@@ -32,12 +52,24 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction.x * velocidade_atual
 		velocity.z = direction.z * velocidade_atual
-		#player_mesh.rotation.y = atan2(-direction.x,-direction.z)
 		player_mesh.rotation.y = lerp_angle(player_mesh.rotation.y, atan2(-direction.x,-direction.z),delta*15)
+	
+	if direction.length():
+		animation_tree.set("parameters/idle/blend_position",direction)
+		animation_tree.set("parameters/run/blend_position",direction)
+		animation_tree.set("parameters/walking/blend_position",direction)
+		if correndo:
+			animation_mode.travel("run")	
+		else:
+			animation_mode.travel("walking")
+		
+			
 	else:
 		velocity.x = move_toward(velocity.x, 0, velocidade_atual)
 		velocity.z = move_toward(velocity.z, 0, velocidade_atual)
+		animation_mode.travel("idle")
+		
+
 	
-	animation_tree.set("parameters/blend_position",input_dir.length())
- 
 	move_and_slide()
+	
