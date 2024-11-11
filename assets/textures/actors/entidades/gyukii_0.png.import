@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpp0tnmm8cn70"
-path.s3tc="res://.godot/imported/gyukii_0.png-5728b82fc3e47d00010c819abdd2513e.s3tc.ctex"
+path.s3tc="res://.godot/imported/gyukii_0.png-101bdac4cc0591bbee7abab4975a778d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/assets/textures/actors/entidades/gyukii_0.png"
-dest_files=["res://.godot/imported/gyukii_0.png-5728b82fc3e47d00010c819abdd2513e.s3tc.ctex"]
+source_file="res://assets/textures/actors/entidades/gyukii_0.png"
+dest_files=["res://.godot/imported/gyukii_0.png-101bdac4cc0591bbee7abab4975a778d.s3tc.ctex"]
 
 [params]
 

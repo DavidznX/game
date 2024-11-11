@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://w14nusk8718j"
-path.s3tc="res://.godot/imported/aluminum_boat_body_0.png-6f154e0c6026caa0b3a32b39ae10d709.s3tc.ctex"
+path.s3tc="res://.godot/imported/aluminum_boat_body_0.png-cfa108c75af2874a33261f8c72419342.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/assets/textures/veiculos/aluminum_boat_body_0.png"
-dest_files=["res://.godot/imported/aluminum_boat_body_0.png-6f154e0c6026caa0b3a32b39ae10d709.s3tc.ctex"]
+source_file="res://assets/textures/veiculos/aluminum_boat_body_0.png"
+dest_files=["res://.godot/imported/aluminum_boat_body_0.png-cfa108c75af2874a33261f8c72419342.s3tc.ctex"]
 
 [params]
 

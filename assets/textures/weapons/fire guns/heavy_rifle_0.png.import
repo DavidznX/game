@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0hdvtg8dk71h"
-path.s3tc="res://.godot/imported/heavy_rifle_0.png-f8a9ac3e4e8b0d48e0b73d020902785e.s3tc.ctex"
+path.s3tc="res://.godot/imported/heavy_rifle_0.png-6ba9f2441e2750999b4cbd7024761bf7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/assets/textures/weapons/fire guns/heavy_rifle_0.png"
-dest_files=["res://.godot/imported/heavy_rifle_0.png-f8a9ac3e4e8b0d48e0b73d020902785e.s3tc.ctex"]
+source_file="res://assets/textures/weapons/fire guns/heavy_rifle_0.png"
+dest_files=["res://.godot/imported/heavy_rifle_0.png-6ba9f2441e2750999b4cbd7024761bf7.s3tc.ctex"]
 
 [params]
 

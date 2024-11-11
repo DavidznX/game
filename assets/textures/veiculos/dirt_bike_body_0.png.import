@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qds3t4hufdfi"
-path.s3tc="res://.godot/imported/dirt_bike_body_0.png-ec85c0c9c66532541afe5ddec7503c12.s3tc.ctex"
+path.s3tc="res://.godot/imported/dirt_bike_body_0.png-c281ae33ee6a85d51c1aed80d59be9ea.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/assets/textures/veiculos/dirt_bike_body_0.png"
-dest_files=["res://.godot/imported/dirt_bike_body_0.png-ec85c0c9c66532541afe5ddec7503c12.s3tc.ctex"]
+source_file="res://assets/textures/veiculos/dirt_bike_body_0.png"
+dest_files=["res://.godot/imported/dirt_bike_body_0.png-c281ae33ee6a85d51c1aed80d59be9ea.s3tc.ctex"]
 
 [params]
 

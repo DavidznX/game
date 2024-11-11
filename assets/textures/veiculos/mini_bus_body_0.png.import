@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwhlhgrsat6rd"
-path.s3tc="res://.godot/imported/mini_bus_body_0.png-52e01bec8b9b82d7d1d3b5c0fc01981a.s3tc.ctex"
+path.s3tc="res://.godot/imported/mini_bus_body_0.png-c2670eeca875d4456a0f3fd226abc311.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/assets/textures/veiculos/mini_bus_body_0.png"
-dest_files=["res://.godot/imported/mini_bus_body_0.png-52e01bec8b9b82d7d1d3b5c0fc01981a.s3tc.ctex"]
+source_file="res://assets/textures/veiculos/mini_bus_body_0.png"
+dest_files=["res://.godot/imported/mini_bus_body_0.png-c2670eeca875d4456a0f3fd226abc311.s3tc.ctex"]
 
 [params]
 

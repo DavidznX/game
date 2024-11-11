@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b42xr13ei4ucr"
-path.s3tc="res://.godot/imported/sword_2.png-646726ad39b2713a029517bfded9a38d.s3tc.ctex"
+path.s3tc="res://.godot/imported/sword_2.png-507f206723119ebc1658f9f6c8bc310d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/assets/textures/weapons/espadas/ultra espada/sword_2.png"
-dest_files=["res://.godot/imported/sword_2.png-646726ad39b2713a029517bfded9a38d.s3tc.ctex"]
+source_file="res://assets/textures/weapons/espadas/ultra espada/sword_2.png"
+dest_files=["res://.godot/imported/sword_2.png-507f206723119ebc1658f9f6c8bc310d.s3tc.ctex"]
 
 [params]
 

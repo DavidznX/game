@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfi4ojmxeqegr"
-path.s3tc="res://.godot/imported/greninja_0.png-b154a6eacad4aea8762366dcbd5c60f5.s3tc.ctex"
+path.s3tc="res://.godot/imported/greninja_0.png-462ae9e4519014f355dc914a89428f91.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/assets/textures/actors/pets/greninja_0.png"
-dest_files=["res://.godot/imported/greninja_0.png-b154a6eacad4aea8762366dcbd5c60f5.s3tc.ctex"]
+source_file="res://assets/textures/actors/pets/greninja_0.png"
+dest_files=["res://.godot/imported/greninja_0.png-462ae9e4519014f355dc914a89428f91.s3tc.ctex"]
 
 [params]
 

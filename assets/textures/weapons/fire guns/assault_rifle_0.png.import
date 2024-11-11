@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr7kkxfg6a32x"
-path.s3tc="res://.godot/imported/assault_rifle_0.png-53e5729719e49593df8f7f01daa56a2e.s3tc.ctex"
+path.s3tc="res://.godot/imported/assault_rifle_0.png-b86ab0d02ab467ec7c9cd6636fc01f3a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/assets/textures/weapons/fire guns/assault_rifle_0.png"
-dest_files=["res://.godot/imported/assault_rifle_0.png-53e5729719e49593df8f7f01daa56a2e.s3tc.ctex"]
+source_file="res://assets/textures/weapons/fire guns/assault_rifle_0.png"
+dest_files=["res://.godot/imported/assault_rifle_0.png-b86ab0d02ab467ec7c9cd6636fc01f3a.s3tc.ctex"]
 
 [params]
 

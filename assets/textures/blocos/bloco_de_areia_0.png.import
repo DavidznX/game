@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0e84v65aqvbf"
-path.s3tc="res://.godot/imported/bloco_de_areia_0.png-eeb8288cdce1de09c062b4398a9ce4ee.s3tc.ctex"
+path.s3tc="res://.godot/imported/bloco_de_areia_0.png-4a30bceec3a857d52ea1fc83bf44e6b5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/assets/textures/blocos/bloco_de_areia_0.png"
-dest_files=["res://.godot/imported/bloco_de_areia_0.png-eeb8288cdce1de09c062b4398a9ce4ee.s3tc.ctex"]
+source_file="res://assets/textures/blocos/bloco_de_areia_0.png"
+dest_files=["res://.godot/imported/bloco_de_areia_0.png-4a30bceec3a857d52ea1fc83bf44e6b5.s3tc.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yeumjw4vjp6v"
-path.s3tc="res://.godot/imported/casa1-dois_andares_7.png-c27b2126c5b532f01923941a384edebf.s3tc.ctex"
+path.s3tc="res://.godot/imported/casa1-dois_andares_7.png-e6348d19e8079b978cdf56147d0c4577.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/assets/textures/constructions/casa1-dois_andares_7.png"
-dest_files=["res://.godot/imported/casa1-dois_andares_7.png-c27b2126c5b532f01923941a384edebf.s3tc.ctex"]
+source_file="res://assets/textures/constructions/casa1-dois_andares_7.png"
+dest_files=["res://.godot/imported/casa1-dois_andares_7.png-e6348d19e8079b978cdf56147d0c4577.s3tc.ctex"]
 
 [params]
 

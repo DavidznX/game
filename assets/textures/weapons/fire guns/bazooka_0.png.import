@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cy8lmdcveqkh2"
-path.s3tc="res://.godot/imported/bazooka_0.png-b3bb1d4046e95403d57b3e802ab386cd.s3tc.ctex"
+path.s3tc="res://.godot/imported/bazooka_0.png-7c1a6e0e044482b9bd0a15f2e3511c7f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/assets/textures/weapons/fire guns/bazooka_0.png"
-dest_files=["res://.godot/imported/bazooka_0.png-b3bb1d4046e95403d57b3e802ab386cd.s3tc.ctex"]
+source_file="res://assets/textures/weapons/fire guns/bazooka_0.png"
+dest_files=["res://.godot/imported/bazooka_0.png-7c1a6e0e044482b9bd0a15f2e3511c7f.s3tc.ctex"]
 
 [params]
 

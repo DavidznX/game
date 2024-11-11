@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bl5d1wlr0jnlb"
-path.s3tc="res://.godot/imported/bloco_de_terra_0.png-0ffd1b7202532af1f4b0fa56fbbde7aa.s3tc.ctex"
+path.s3tc="res://.godot/imported/bloco_de_terra_0.png-69f13d3f45d36d2136d5639edee4f315.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/assets/textures/blocos/bloco_de_terra_0.png"
-dest_files=["res://.godot/imported/bloco_de_terra_0.png-0ffd1b7202532af1f4b0fa56fbbde7aa.s3tc.ctex"]
+source_file="res://assets/textures/blocos/bloco_de_terra_0.png"
+dest_files=["res://.godot/imported/bloco_de_terra_0.png-69f13d3f45d36d2136d5639edee4f315.s3tc.ctex"]
 
 [params]
 

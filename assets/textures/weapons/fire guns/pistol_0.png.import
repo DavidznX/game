@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c05bahojqaoyy"
-path.s3tc="res://.godot/imported/pistol_0.png-984e44b2c32b3de8610dbe66b0bf49a9.s3tc.ctex"
+path.s3tc="res://.godot/imported/pistol_0.png-ea40841db7b799dbc1fd4ceec69fda1a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/assets/textures/weapons/fire guns/pistol_0.png"
-dest_files=["res://.godot/imported/pistol_0.png-984e44b2c32b3de8610dbe66b0bf49a9.s3tc.ctex"]
+source_file="res://assets/textures/weapons/fire guns/pistol_0.png"
+dest_files=["res://.godot/imported/pistol_0.png-ea40841db7b799dbc1fd4ceec69fda1a.s3tc.ctex"]
 
 [params]
 

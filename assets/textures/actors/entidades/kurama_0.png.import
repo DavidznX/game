@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dropxcy04mdh5"
-path.s3tc="res://.godot/imported/kurama_0.png-cb0c90a39f396f6efe89b095d1b956d6.s3tc.ctex"
+path.s3tc="res://.godot/imported/kurama_0.png-39d64526087905bda1f9baaf7698b249.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://assets/assets/textures/actors/entidades/kurama_0.png"
-dest_files=["res://.godot/imported/kurama_0.png-cb0c90a39f396f6efe89b095d1b956d6.s3tc.ctex"]
+source_file="res://assets/textures/actors/entidades/kurama_0.png"
+dest_files=["res://.godot/imported/kurama_0.png-39d64526087905bda1f9baaf7698b249.s3tc.ctex"]
 
 [params]
 
