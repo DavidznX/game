@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://de1klhf0kkse1"]
+[gd_scene load_steps=14 format=3 uid="uid://de1klhf0kkse1"]
 
 [ext_resource type="Script" path="res://scripts/ataques/bijjudama.gd" id="1_50ape"]
 
@@ -237,10 +237,26 @@ tracks/0/keys = {
 "values": [Vector3(5, 5, 5), Vector3(5, 5, 5), Vector3(120, 120, 120)]
 }
 
+[sub_resource type="Animation" id="Animation_fq622"]
+resource_name = "default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D3:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(5, 5, 5)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qg8ql"]
 _data = {
 "RESET": SubResource("Animation_rlgph"),
 "carregando": SubResource("Animation_moa6h"),
+"default": SubResource("Animation_fq622"),
 "explosao": SubResource("Animation_6mftv")
 }
 
@@ -289,5 +305,6 @@ mesh = SubResource("SphereMesh_twv7f")
 libraries = {
 "": SubResource("AnimationLibrary_qg8ql")
 }
+autoplay = "default"
 
 [connection signal="body_entered" from="MeshInstance3D3/Area3D" to="." method="_on_area_3d_body_entered"]

@@ -8,6 +8,13 @@ const MAX := 250
 
 var cam_hor := 0.0
 var cam_ver := 0.0
+@onready var camera: Camera3D = $horizontal/vertical/Spring_arm/Camera
+
+
+	
+
+
+
 func  _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	

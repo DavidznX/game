@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlg8xqjp84qnp"]
+
+[ext_resource type="Script" path="res://scripts/ataques/lapso.gd" id="1_6q2uu"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7l4k2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_658pi"]
+albedo_color = Color(0.129412, 0.615686, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_21q75"]
+material = SubResource("StandardMaterial3D_658pi")
+
+[node name="lapso" type="Area3D"]
+script = ExtResource("1_6q2uu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_7l4k2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_21q75")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=336 format=4 uid="uid://5sn3vqcjnlob"]
+[gd_scene load_steps=339 format=4 uid="uid://5sn3vqcjnlob"]
 
 [ext_resource type="Texture2D" uid="uid://dropxcy04mdh5" path="res://assets/textures/actors/entidades/kurama_0.png" id="1_c03w3"]
+[ext_resource type="Script" path="res://scripts/entidades/kurama.gd" id="1_c5sg8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_my65x"]
 resource_name = "material_0"
@@ -1740,6 +1741,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_d4tgq")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_s0bwh"]
+size = Vector3(5.51538, 1, 15.5703)
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_gfi2w"]
 _surfaces = [{
 "aabb": AABB(-0.06875, 0.407813, -1.44375, 0.325, 0.2, 0.45),
@@ -2475,6 +2479,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_cski6")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_utmmf"]
+size = Vector3(0.697266, 0.780762, 1.16797)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_1tjfh"]
 _surfaces = [{
@@ -11544,7 +11551,8 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_6o2e0"]
 size = Vector3(1, 1.12866, 6.54126)
 
-[node name="Kurama" type="CharacterBody3D"]
+[node name="Kurama" type="CharacterBody3D" groups=["enemy"]]
+script = ExtResource("1_c5sg8")
 
 [node name="blockbench_export" type="Node3D" parent="."]
 
@@ -11557,7 +11565,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0625, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0625, 1.9375, 1.75)
 
 [node name="leftleg4" type="Node3D" parent="blockbench_export/Node/root/legs"]
-transform = Transform3D(0.315984, 0.930411, -0.185708, -0.130885, -0.151117, -0.979813, -0.939691, 0.333912, 0.0740264, -0.625, 1.375, 0.0625)
+transform = Transform3D(0.321394, 0.928997, -0.183489, -0.116978, -0.153335, -0.981226, -0.93969, 0.336824, 0.0593912, -0.625, 1.375, 0.0625)
 
 [node name="leftleg" type="MeshInstance3D" parent="blockbench_export/Node/root/legs/leftleg4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5625, -2.25, -1.8125)
@@ -11565,7 +11573,7 @@ mesh = SubResource("ArrayMesh_wb28p")
 skeleton = NodePath("")
 
 [node name="leftleg22" type="Node3D" parent="blockbench_export/Node/root/legs/leftleg4"]
-transform = Transform3D(0.696022, 0.140257, -0.704189, 0.692448, -0.390529, 0.606633, -0.189922, -0.909844, -0.368937, -0.25, -1.625, -0.25)
+transform = Transform3D(0.720357, 0.151454, -0.676866, 0.67319, -0.387683, 0.629697, -0.167039, -0.909266, -0.381227, -0.25, -1.625, -0.25)
 
 [node name="leftleg2" type="MeshInstance3D" parent="blockbench_export/Node/root/legs/leftleg4/leftleg22"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8125, -0.625, -1.5625)
@@ -11643,7 +11651,7 @@ mesh = SubResource("ArrayMesh_levsf")
 skeleton = NodePath("")
 
 [node name="rightleg42" type="Node3D" parent="blockbench_export/Node/root/legs"]
-transform = Transform3D(0.315984, -0.930411, 0.185708, 0.130885, -0.151117, -0.979813, 0.939691, 0.333912, 0.0740264, 0.5, 1.375, 0.0625)
+transform = Transform3D(0.321394, -0.928997, 0.183489, 0.116978, -0.153335, -0.981226, 0.93969, 0.336824, 0.0593912, 0.5, 1.375, 0.0625)
 
 [node name="rightleg4" type="MeshInstance3D" parent="blockbench_export/Node/root/legs/rightleg42"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5625, -2.25, -1.8125)
@@ -11651,7 +11659,7 @@ mesh = SubResource("ArrayMesh_v00ml")
 skeleton = NodePath("")
 
 [node name="rightleg52" type="Node3D" parent="blockbench_export/Node/root/legs/rightleg42"]
-transform = Transform3D(0.696022, -0.140257, 0.704189, -0.692448, -0.390529, 0.606633, 0.189922, -0.909844, -0.368937, 0.25, -1.625, -0.25)
+transform = Transform3D(0.720357, -0.151454, 0.676866, -0.67319, -0.387683, 0.629697, 0.167039, -0.909266, -0.381227, 0.25, -1.625, -0.25)
 
 [node name="rightleg5" type="MeshInstance3D" parent="blockbench_export/Node/root/legs/rightleg42/rightleg52"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8125, -0.625, -1.5625)
@@ -11732,7 +11740,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 1.9375, 0)
 
 [node name="leftarm3" type="Node3D" parent="blockbench_export/Node/root/arms"]
-transform = Transform3D(0.964982, -0.0537072, 0.256759, -0.164782, 0.637472, 0.752646, -0.204099, -0.768599, 0.606299, 0, 0.9375, 0)
+transform = Transform3D(0.966035, -0.0420633, 0.254966, -0.164852, 0.659499, 0.733406, -0.198999, -0.750527, 0.630165, 0, 0.9375, 0)
 
 [node name="leftarm" type="MeshInstance3D" parent="blockbench_export/Node/root/arms/leftarm3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, -1.8125, 0)
@@ -11745,7 +11753,7 @@ mesh = SubResource("ArrayMesh_hfbul")
 skeleton = NodePath("")
 
 [node name="leftarm23" type="Node3D" parent="blockbench_export/Node/root/arms/leftarm3"]
-transform = Transform3D(-0.15738, 0.412072, -0.897456, -0.0733864, 0.901389, 0.426746, 0.984808, 0.133023, -0.11162, -2.5, 0, 0.25)
+transform = Transform3D(-0.0761588, 0.416906, -0.905753, -0.097328, 0.900946, 0.422876, 0.992334, 0.120361, -0.0280382, -2.5, 0, 0.25)
 
 [node name="leftarm22" type="MeshInstance3D" parent="blockbench_export/Node/root/arms/leftarm3/leftarm23"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75, -1.8125, -0.25)
@@ -11753,7 +11761,7 @@ mesh = SubResource("ArrayMesh_5j2wy")
 skeleton = NodePath("")
 
 [node name="lefthand2" type="Node3D" parent="blockbench_export/Node/root/arms/leftarm3/leftarm23"]
-transform = Transform3D(0.931653, 0.362924, -0.0175681, -0.339095, 0.851079, -0.400849, -0.130526, 0.37941, 0.915976, -2.5625, 0, -0.1875)
+transform = Transform3D(0.931653, 0.362924, -0.0175675, -0.339095, 0.851079, -0.400849, -0.130526, 0.37941, 0.915976, -2.5625, 0, -0.1875)
 
 [node name="lefthand" type="MeshInstance3D" parent="blockbench_export/Node/root/arms/leftarm3/leftarm23/lefthand2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3125, -1.8125, -0.0625)
@@ -11798,7 +11806,7 @@ mesh = SubResource("ArrayMesh_n6ruj")
 skeleton = NodePath("")
 
 [node name="leftfinger24" type="Node3D" parent="blockbench_export/Node/root/arms/leftarm3/leftarm23/lefthand2/leftfingers"]
-transform = Transform3D(0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0, 0, 1, -0.0625, 0.0625, -0.125)
+transform = Transform3D(0.999048, 0.0436193, 0, -0.0436193, 0.999048, 0, 0, 0, 1, -0.0625, 0.0625, -0.125)
 
 [node name="leftfinger22" type="MeshInstance3D" parent="blockbench_export/Node/root/arms/leftarm3/leftarm23/lefthand2/leftfingers/leftfinger24"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0625, -1.9375, 0.125)
@@ -11811,7 +11819,7 @@ mesh = SubResource("ArrayMesh_07gd3")
 skeleton = NodePath("")
 
 [node name="leftfinger43" type="Node3D" parent="blockbench_export/Node/root/arms/leftarm3/leftarm23/lefthand2/leftfingers"]
-transform = Transform3D(0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0, 0, 1, -0.0625, 0.0625, 0.125)
+transform = Transform3D(0.999048, 0.0436193, 0, -0.0436193, 0.999048, 0, 0, 0, 1, -0.0625, 0.0625, 0.125)
 
 [node name="leftfinger4" type="MeshInstance3D" parent="blockbench_export/Node/root/arms/leftarm3/leftarm23/lefthand2/leftfingers/leftfinger43"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0625, -1.9375, -0.125)
@@ -11824,7 +11832,7 @@ mesh = SubResource("ArrayMesh_r4vjs")
 skeleton = NodePath("")
 
 [node name="rightarm33" type="Node3D" parent="blockbench_export/Node/root/arms"]
-transform = Transform3D(0.961464, 0.0977705, -0.25696, 0.169533, 0.524952, 0.834076, 0.21644, -0.845497, 0.488147, 0.5, 0.9375, 0)
+transform = Transform3D(0.961464, 0.0516644, -0.270033, 0.169532, 0.661814, 0.730247, 0.21644, -0.747885, 0.627551, 0.5, 0.9375, 0)
 
 [node name="rightarm3" type="MeshInstance3D" parent="blockbench_export/Node/root/arms/rightarm33"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, -1.8125, 0)
@@ -11837,7 +11845,7 @@ mesh = SubResource("ArrayMesh_yvayh")
 skeleton = NodePath("")
 
 [node name="rightarm42" type="Node3D" parent="blockbench_export/Node/root/arms/rightarm33"]
-transform = Transform3D(-0.115461, -0.323676, 0.939097, 0.143673, 0.930036, 0.338218, -0.982867, 0.173974, -0.0608793, 2.5, 0, 0.25)
+transform = Transform3D(-0.15738, -0.412072, 0.897457, 0.0733866, 0.901389, 0.426747, -0.984808, 0.133023, -0.11162, 2.5, 0, 0.25)
 
 [node name="rightarm4" type="MeshInstance3D" parent="blockbench_export/Node/root/arms/rightarm33/rightarm42"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.75, -1.8125, -0.25)
@@ -11845,7 +11853,7 @@ mesh = SubResource("ArrayMesh_prg7x")
 skeleton = NodePath("")
 
 [node name="righthand2" type="Node3D" parent="blockbench_export/Node/root/arms/rightarm33/rightarm42"]
-transform = Transform3D(0.879421, -0.470907, 0.0697389, 0.457799, 0.796426, -0.395126, 0.130526, 0.379409, 0.915976, 2.5625, 0, -0.1875)
+transform = Transform3D(0.931652, -0.362924, 0.0175676, 0.339095, 0.851078, -0.400849, 0.130526, 0.379409, 0.915976, 2.5625, 0, -0.1875)
 
 [node name="righthand" type="MeshInstance3D" parent="blockbench_export/Node/root/arms/rightarm33/rightarm42/righthand2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3125, -1.8125, -0.0625)
@@ -11890,7 +11898,7 @@ mesh = SubResource("ArrayMesh_qp26o")
 skeleton = NodePath("")
 
 [node name="rightfinger73" type="Node3D" parent="blockbench_export/Node/root/arms/rightarm33/rightarm42/righthand2/rightfingers"]
-transform = Transform3D(0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, 0, 0, 1, 0.0625, 0.0625, -0.125)
+transform = Transform3D(0.999048, -0.0436193, 0, 0.0436193, 0.999048, 0, 0, 0, 1, 0.0625, 0.0625, -0.125)
 
 [node name="rightfinger7" type="MeshInstance3D" parent="blockbench_export/Node/root/arms/rightarm33/rightarm42/righthand2/rightfingers/rightfinger73"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0625, -1.9375, 0.125)
@@ -11903,7 +11911,7 @@ mesh = SubResource("ArrayMesh_ijm6f")
 skeleton = NodePath("")
 
 [node name="rightfinger83" type="Node3D" parent="blockbench_export/Node/root/arms/rightarm33/rightarm42/righthand2/rightfingers"]
-transform = Transform3D(0.999048, -0.0436194, 0, 0.0436194, 0.999048, 0, 0, 0, 1, 0.0625, 0.0625, 0.125)
+transform = Transform3D(0.999048, -0.0436193, 0, 0.0436193, 0.999048, 0, 0, 0, 1, 0.0625, 0.0625, 0.125)
 
 [node name="rightfinger8" type="MeshInstance3D" parent="blockbench_export/Node/root/arms/rightarm33/rightarm42/righthand2/rightfingers/rightfinger83"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0625, -1.9375, -0.125)
@@ -11943,6 +11951,13 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 0.996195, -0.0871557, 0, 0.0871557, 0.996195, 0.21875, 0.226859, -0.787147)
 mesh = SubResource("ArrayMesh_cfj0m")
 skeleton = NodePath("")
+
+[node name="Area3D" type="Area3D" parent="blockbench_export/Node/root/body3/neck2/head27/head2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.109673, -1.25355)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="blockbench_export/Node/root/body3/neck2/head27/head2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 0.999991, -7.15256e-07, 0, 7.15256e-07, 0.999991, 0.0210732, 0.197302, -7.26789)
+shape = SubResource("BoxShape3D_s0bwh")
 
 [node name="head3" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/neck2/head27"]
 transform = Transform3D(1, 0, 0, 0, 0.953717, -0.300706, 0, 0.300706, 0.953717, -0.09375, -0.786376, -0.381222)
@@ -12059,13 +12074,20 @@ transform = Transform3D(1, 0, 0, 0, 0.953717, -0.300706, 0, 0.300706, 0.953717, 
 mesh = SubResource("ArrayMesh_pfp4i")
 skeleton = NodePath("")
 
+[node name="Area3D" type="Area3D" parent="blockbench_export/Node/root/body3/neck2/head27/head25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.164451, -1.24913)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="blockbench_export/Node/root/body3/neck2/head27/head25/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.151367, 0.385499, -0.0839856)
+shape = SubResource("BoxShape3D_utmmf")
+
 [node name="head26" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/neck2/head27"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.125, 1.5)
 mesh = SubResource("ArrayMesh_u7k32")
 skeleton = NodePath("")
 
 [node name="jaw8" type="Node3D" parent="blockbench_export/Node/root/body3/neck2/head27"]
-transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, -0.03125, 0.1875, -0.4375)
+transform = Transform3D(1, 0, 0, 0, 0.999048, -0.0436193, 0, 0.0436193, 0.999048, -0.03125, 0.1875, -0.4375)
 
 [node name="jaw" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/neck2/head27/jaw8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03125, -2.3125, 1.9375)
@@ -12103,7 +12125,7 @@ mesh = SubResource("ArrayMesh_wbwf2")
 skeleton = NodePath("")
 
 [node name="leftear4" type="Node3D" parent="blockbench_export/Node/root/body3/neck2/head27"]
-transform = Transform3D(0.819152, 0.242404, -0.519837, 2.98023e-08, 0.906308, 0.422618, 0.573577, -0.346188, 0.742404, -0.21875, 0.6875, -0.125)
+transform = Transform3D(0.819152, 0.242404, -0.519837, 9.68576e-08, 0.906308, 0.422618, 0.573577, -0.346188, 0.742404, -0.21875, 0.6875, -0.125)
 
 [node name="leftear" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/neck2/head27/leftear4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21875, -2.8125, 1.625)
@@ -12142,7 +12164,7 @@ mesh = SubResource("ArrayMesh_spq1x")
 skeleton = NodePath("")
 
 [node name="rightear43" type="Node3D" parent="blockbench_export/Node/root/body3/neck2/head27"]
-transform = Transform3D(0.819152, -0.242404, 0.519837, -2.98023e-08, 0.906308, 0.422618, -0.573577, -0.346188, 0.742404, 0.21875, 0.6875, -0.125)
+transform = Transform3D(0.819152, -0.242404, 0.519837, -9.68576e-08, 0.906308, 0.422618, -0.573577, -0.346188, 0.742404, 0.21875, 0.6875, -0.125)
 
 [node name="rightear4" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/neck2/head27/rightear43"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21875, -2.8125, 1.625)
@@ -12192,7 +12214,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0625, -0.5625, 0.875)
 
 [node name="tail12" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails"]
-transform = Transform3D(0.647498, 0.304213, 0.698713, 3.8743e-07, 0.916865, -0.399196, -0.762067, 0.258479, 0.593668, 0, 0.9375, 0.625)
+transform = Transform3D(1, 0, 0, 0, 0.939692, -0.342019, 0, 0.342019, 0.939692, 0, 0.9375, 0.625)
 
 [node name="tail1" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0625, -2.5, -2.375)
@@ -12200,7 +12222,7 @@ mesh = SubResource("ArrayMesh_ryeuw")
 skeleton = NodePath("")
 
 [node name="tail22" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail12"]
-transform = Transform3D(0.999103, 0.0188768, -0.0379073, -2.51457e-08, 0.895152, 0.445762, 0.0423473, -0.445362, 0.894349, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.342019, 0, -0.34202, 0.939692, 0, 0, 0.75)
 
 [node name="tail2" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail12/tail22"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0625, -2.5, -3.125)
@@ -12208,7 +12230,7 @@ mesh = SubResource("ArrayMesh_8nqm2")
 skeleton = NodePath("")
 
 [node name="tail32" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail12/tail22"]
-transform = Transform3D(0.999526, 0.00796424, -0.0297229, 5.58793e-09, 0.965926, 0.258819, 0.0307714, -0.258697, 0.965468, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0.75)
 
 [node name="tail3" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail12/tail22/tail32"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0625, -2.5, -3.875)
@@ -12216,7 +12238,7 @@ mesh = SubResource("ArrayMesh_dckh2")
 skeleton = NodePath("")
 
 [node name="tail42" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail12/tail22/tail32"]
-transform = Transform3D(0.999869, 0.00552629, -0.0152064, -3.0268e-09, 0.939859, 0.341563, 0.0161794, -0.341518, 0.939736, 0, 0, 1.5)
+transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300705, 0, -0.300705, 0.953717, 0, 0, 1.5)
 
 [node name="tail4" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail12/tail22/tail32/tail42"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0625, -2.5, -5.375)
@@ -12224,7 +12246,7 @@ mesh = SubResource("ArrayMesh_rt7ws")
 skeleton = NodePath("")
 
 [node name="tail52" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail12/tail22/tail32/tail42"]
-transform = Transform3D(1, 1.62741e-18, -6.20229e-18, 2.58494e-24, 0.967258, 0.253797, 6.41224e-18, -0.253797, 0.967258, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 1.9375)
 
 [node name="tail5" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail12/tail22/tail32/tail42/tail52"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0625, -2.5, -7.3125)
@@ -12232,7 +12254,7 @@ mesh = SubResource("ArrayMesh_rbdqn")
 skeleton = NodePath("")
 
 [node name="tail62" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail12/tail22/tail32/tail42/tail52"]
-transform = Transform3D(0.999869, -0.00486524, 0.0154306, 3.72529e-09, 0.953717, 0.300705, -0.0161794, -0.300666, 0.953592, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300705, 0, -0.300705, 0.953717, 0, 0, 1.9375)
 
 [node name="tail6" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail12/tail22/tail32/tail42/tail52/tail62"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0625, -2.5, -9.25)
@@ -12240,7 +12262,7 @@ mesh = SubResource("ArrayMesh_ctab4")
 skeleton = NodePath("")
 
 [node name="tail72" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail12/tail22/tail32/tail42/tail52/tail62"]
-transform = Transform3D(0.999526, 0.00664557, 0.0300453, -1.74623e-08, 0.976401, -0.215964, -0.0307715, 0.215862, 0.975938, 0, 0, 1.1875)
+transform = Transform3D(1, 0, 0, 0, 0.984807, -0.173648, 0, 0.173648, 0.984807, 0, 0, 1.1875)
 
 [node name="tail7" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail12/tail22/tail32/tail42/tail52/tail62/tail72"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0625, -2.5, -10.4375)
@@ -12248,7 +12270,7 @@ mesh = SubResource("ArrayMesh_ybuva")
 skeleton = NodePath("")
 
 [node name="tail82" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails"]
-transform = Transform3D(0.939693, 0.161044, 0.301733, -1.86265e-07, 0.882208, -0.470861, -0.34202, 0.442464, 0.829005, 0.125, 0.9375, 0.625)
+transform = Transform3D(0.939693, 0.157927, 0.303376, 2.16067e-07, 0.887011, -0.461749, -0.34202, 0.433902, 0.833518, 0.125, 0.9375, 0.625)
 
 [node name="tail8" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail82"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1875, -2.5, -2.375)
@@ -12256,7 +12278,7 @@ mesh = SubResource("ArrayMesh_0eyqt")
 skeleton = NodePath("")
 
 [node name="tail92" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail82"]
-transform = Transform3D(1, 0, 0, 0, 0.956764, 0.290866, 0, -0.290866, 0.956764, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0.75)
 
 [node name="tail9" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail82/tail92"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1875, -2.5, -3.125)
@@ -12264,7 +12286,7 @@ mesh = SubResource("ArrayMesh_rmt8i")
 skeleton = NodePath("")
 
 [node name="tail102" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail82/tail92"]
-transform = Transform3D(1, 0, 0, 0, 0.987353, 0.15854, 0, -0.15854, 0.987353, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0.75)
 
 [node name="tail10" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail82/tail92/tail102"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1875, -2.5, -3.875)
@@ -12272,7 +12294,7 @@ mesh = SubResource("ArrayMesh_ldyu1")
 skeleton = NodePath("")
 
 [node name="tail112" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail82/tail92/tail102"]
-transform = Transform3D(1, 0, 0, 0, 0.986544, 0.163495, 0, -0.163495, 0.986544, 0, 0, 1.5)
+transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300705, 0, -0.300705, 0.953717, 0, 0, 1.5)
 
 [node name="tail11" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail82/tail92/tail102/tail112"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1875, -2.5, -5.375)
@@ -12280,7 +12302,7 @@ mesh = SubResource("ArrayMesh_j8gxt")
 skeleton = NodePath("")
 
 [node name="tail123" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail82/tail92/tail102/tail112"]
-transform = Transform3D(1, 0, 0, 0, 0.999963, 0.00854214, 0, -0.00854214, 0.999963, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.984807, 0.173648, 0, -0.173648, 0.984807, 0, 0, 1.9375)
 
 [node name="tail122" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail82/tail92/tail102/tail112/tail123"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1875, -2.5, -7.3125)
@@ -12296,7 +12318,7 @@ mesh = SubResource("ArrayMesh_svgqo")
 skeleton = NodePath("")
 
 [node name="tail142" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail82/tail92/tail102/tail112/tail123/tail132"]
-transform = Transform3D(1, 0, 0, 0, 0.94258, -0.33398, 0, 0.33398, 0.94258, 0, 0, 1.1875)
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 1.1875)
 
 [node name="tail14" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail82/tail92/tail102/tail112/tail123/tail132/tail142"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1875, -2.5, -10.4375)
@@ -12304,7 +12326,7 @@ mesh = SubResource("ArrayMesh_4kshi")
 skeleton = NodePath("")
 
 [node name="tail432" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails"]
-transform = Transform3D(0.948573, -0.124148, -0.291199, -7.45058e-08, 0.919889, -0.392179, 0.316559, 0.372011, 0.872581, -0.25, 0.9375, 0.625)
+transform = Transform3D(0.939693, -0.157927, -0.303376, -2.16067e-07, 0.887011, -0.461749, 0.34202, 0.433902, 0.833517, -0.25, 0.9375, 0.625)
 
 [node name="tail43" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail432"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, -2.5, -2.375)
@@ -12312,7 +12334,7 @@ mesh = SubResource("ArrayMesh_huv8g")
 skeleton = NodePath("")
 
 [node name="tail442" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail432"]
-transform = Transform3D(0.999636, -0.0078428, 0.0257978, -1.90921e-08, 0.956764, 0.290867, -0.0269636, -0.290761, 0.956416, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0.75)
 
 [node name="tail44" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail432/tail442"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, -2.5, -3.125)
@@ -12320,7 +12342,7 @@ mesh = SubResource("ArrayMesh_xo332")
 skeleton = NodePath("")
 
 [node name="tail452" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail432/tail442"]
-transform = Transform3D(0.999636, -0.00427478, 0.0266225, -2.09547e-09, 0.987353, 0.15854, -0.0269635, -0.158482, 0.986994, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0.75)
 
 [node name="tail45" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail432/tail442/tail452"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, -2.5, -3.875)
@@ -12328,7 +12350,7 @@ mesh = SubResource("ArrayMesh_005cx")
 skeleton = NodePath("")
 
 [node name="tail462" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail432/tail442/tail452"]
-transform = Transform3D(0.999636, -0.00440842, 0.0266008, -5.3551e-09, 0.986544, 0.163495, -0.0269636, -0.163436, 0.986185, 0, 0, 1.5)
+transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300705, 0, -0.300705, 0.953717, 0, 0, 1.5)
 
 [node name="tail46" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail432/tail442/tail452/tail462"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, -2.5, -5.375)
@@ -12336,7 +12358,7 @@ mesh = SubResource("ArrayMesh_ketqa")
 skeleton = NodePath("")
 
 [node name="tail472" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail432/tail442/tail452/tail462"]
-transform = Transform3D(0.999636, -0.000230327, 0.0269626, -9.45874e-11, 0.999963, 0.00854214, -0.0269636, -0.00853903, 0.9996, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.984807, 0.173648, 0, -0.173648, 0.984808, 0, 0, 1.9375)
 
 [node name="tail47" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail432/tail442/tail452/tail462/tail472"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, -2.5, -7.3125)
@@ -12344,7 +12366,7 @@ mesh = SubResource("ArrayMesh_k1x0d")
 skeleton = NodePath("")
 
 [node name="tail482" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail432/tail442/tail452/tail462/tail472"]
-transform = Transform3D(0.999636, -0.00351945, 0.0267328, 2.44472e-09, 0.991445, 0.130526, -0.0269635, -0.130479, 0.991084, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300705, 0, -0.300705, 0.953717, 0, 0, 1.9375)
 
 [node name="tail48" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail432/tail442/tail452/tail462/tail472/tail482"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, -2.5, -9.25)
@@ -12352,7 +12374,7 @@ mesh = SubResource("ArrayMesh_tctda")
 skeleton = NodePath("")
 
 [node name="tail492" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail432/tail442/tail452/tail462/tail472/tail482"]
-transform = Transform3D(0.999636, 0.0090053, 0.0254153, -6.05359e-09, 0.94258, -0.333981, -0.0269635, 0.333859, 0.942237, 0, 0, 1.1875)
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 1.1875)
 
 [node name="tail49" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail432/tail442/tail452/tail462/tail472/tail482/tail492"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, -2.5, -10.4375)
@@ -12360,7 +12382,7 @@ mesh = SubResource("ArrayMesh_e7jl0")
 skeleton = NodePath("")
 
 [node name="tail152" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails"]
-transform = Transform3D(0.708941, 0.237838, 0.663954, 3.65079e-07, 0.941422, -0.337231, -0.705268, 0.239077, 0.667412, 0.0625, 0.4375, 0.625)
+transform = Transform3D(0.991445, 0.0602704, 0.115778, -1.86265e-08, 0.887011, -0.461749, -0.130526, 0.457799, 0.879421, 0.0625, 0.4375, 0.625)
 
 [node name="tail15" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail152"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, -2, -2.375)
@@ -12368,7 +12390,7 @@ mesh = SubResource("ArrayMesh_ccbhv")
 skeleton = NodePath("")
 
 [node name="tail162" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail152"]
-transform = Transform3D(0.999158, -0.00732933, 0.0403634, 1.49012e-08, 0.983911, 0.178661, -0.0410235, -0.178511, 0.983082, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.342019, 0, -0.34202, 0.939692, 0, 0, 0.75)
 
 [node name="tail16" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail152/tail162"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, -2, -3.125)
@@ -12376,7 +12398,7 @@ mesh = SubResource("ArrayMesh_ol487")
 skeleton = NodePath("")
 
 [node name="tail172" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail152/tail162"]
-transform = Transform3D(0.999158, -0.00256684, 0.0409433, -4.65661e-10, 0.998041, 0.0625697, -0.0410237, -0.0625171, 0.9972, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0.75)
 
 [node name="tail17" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail152/tail162/tail172"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, -2, -3.875)
@@ -12384,7 +12406,7 @@ mesh = SubResource("ArrayMesh_gg2sh")
 skeleton = NodePath("")
 
 [node name="tail182" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail152/tail162/tail172"]
-transform = Transform3D(0.999158, -0.00393194, 0.0408347, 1.86264e-09, 0.995396, 0.0958457, -0.0410236, -0.095765, 0.994558, 0, 0, 1.5)
+transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300705, 0, -0.300705, 0.953717, 0, 0, 1.5)
 
 [node name="tail18" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail152/tail162/tail172/tail182"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, -2, -5.375)
@@ -12392,7 +12414,7 @@ mesh = SubResource("ArrayMesh_j0svy")
 skeleton = NodePath("")
 
 [node name="tail192" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail152/tail162/tail172/tail182"]
-transform = Transform3D(0.999158, 0.00101137, 0.0410112, -5.82076e-10, 0.999696, -0.0246533, -0.0410237, 0.0246326, 0.998854, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984807, 0, 0, 1.9375)
 
 [node name="tail19" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail152/tail162/tail172/tail182/tail192"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, -2, -7.3125)
@@ -12400,7 +12422,7 @@ mesh = SubResource("ArrayMesh_dg82v")
 skeleton = NodePath("")
 
 [node name="tail202" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail152/tail162/tail172/tail182/tail192"]
-transform = Transform3D(0.999158, -0.00556175, 0.0406448, 1.04774e-08, 0.990767, 0.135574, -0.0410236, -0.13546, 0.989933, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300705, 0, -0.300705, 0.953717, 0, 0, 1.9375)
 
 [node name="tail20" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail152/tail162/tail172/tail182/tail192/tail202"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, -2, -9.25)
@@ -12408,7 +12430,7 @@ mesh = SubResource("ArrayMesh_adqj2")
 skeleton = NodePath("")
 
 [node name="tail212" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail152/tail162/tail172/tail182/tail192/tail202"]
-transform = Transform3D(0.999158, 0.0120307, 0.03922, -1.16415e-08, 0.956032, -0.293263, -0.0410237, 0.293016, 0.955227, 0, 0, 1.1875)
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 1.1875)
 
 [node name="tail21" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail152/tail162/tail172/tail182/tail192/tail202/tail212"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, -2, -10.4375)
@@ -12416,7 +12438,7 @@ mesh = SubResource("ArrayMesh_ruccx")
 skeleton = NodePath("")
 
 [node name="tail572" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails"]
-transform = Transform3D(0.791769, -0.147482, -0.592748, 1.3411e-07, 0.970413, -0.241449, 0.610821, 0.191172, 0.768343, -0.1875, 0.4375, 0.625)
+transform = Transform3D(0.991445, -0.0602704, -0.115778, 1.67638e-08, 0.88701, -0.461749, 0.130526, 0.457798, 0.879422, -0.1875, 0.4375, 0.625)
 
 [node name="tail57" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail572"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -2, -2.375)
@@ -12424,7 +12446,7 @@ mesh = SubResource("ArrayMesh_eh2c6")
 skeleton = NodePath("")
 
 [node name="tail582" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail572"]
-transform = Transform3D(0.999158, -0.00959615, 0.0398854, 1.90921e-08, 0.972256, 0.233918, -0.0410235, -0.233721, 0.971438, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.939692, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0.75)
 
 [node name="tail58" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail572/tail582"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -2, -3.125)
@@ -12432,7 +12454,7 @@ mesh = SubResource("ArrayMesh_llekm")
 skeleton = NodePath("")
 
 [node name="tail592" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail572/tail582"]
-transform = Transform3D(0.999158, -0.00733349, 0.0403629, -1.28057e-08, 0.983892, 0.178763, -0.0410237, -0.178612, 0.983064, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0.75)
 
 [node name="tail59" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail572/tail582/tail592"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -2, -3.875)
@@ -12440,7 +12462,7 @@ mesh = SubResource("ArrayMesh_puu1f")
 skeleton = NodePath("")
 
 [node name="tail602" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail572/tail582/tail592"]
-transform = Transform3D(0.999158, -0.010637, 0.0396207, -1.44355e-08, 0.9658, 0.259289, -0.0410237, -0.259071, 0.964987, 0, 0, 1.5)
+transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300705, 0, -0.300705, 0.953717, 0, 0, 1.5)
 
 [node name="tail60" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail572/tail582/tail592/tail602"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -2, -5.375)
@@ -12448,7 +12470,7 @@ mesh = SubResource("ArrayMesh_hv15m")
 skeleton = NodePath("")
 
 [node name="tail612" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail572/tail582/tail592/tail602"]
-transform = Transform3D(0.999158, -0.00712369, 0.0404005, -5.58793e-09, 0.984808, 0.173648, -0.0410237, -0.173502, 0.983979, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 1.9375)
 
 [node name="tail61" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail572/tail582/tail592/tail602/tail612"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -2, -7.3125)
@@ -12456,7 +12478,7 @@ mesh = SubResource("ArrayMesh_811tb")
 skeleton = NodePath("")
 
 [node name="tail623" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail572/tail582/tail592/tail602/tail612"]
-transform = Transform3D(0.999158, -0.0140121, 0.0385564, 2.28174e-08, 0.939859, 0.341563, -0.0410236, -0.341275, 0.939068, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300705, 0, -0.300705, 0.953717, 0, 0, 1.9375)
 
 [node name="tail622" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail572/tail582/tail592/tail602/tail612/tail623"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -2, -9.25)
@@ -12464,7 +12486,7 @@ mesh = SubResource("ArrayMesh_ajfuv")
 skeleton = NodePath("")
 
 [node name="tail632" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail572/tail582/tail592/tail602/tail612/tail623"]
-transform = Transform3D(0.999158, 0.00378775, 0.0408484, -1.97906e-09, 0.995728, -0.0923309, -0.0410236, 0.0922532, 0.99489, 0, 0, 1.1875)
+transform = Transform3D(1, 0, 0, 0, 0.984807, -0.173648, 0, 0.173648, 0.984808, 0, 0, 1.1875)
 
 [node name="tail63" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail572/tail582/tail592/tail602/tail612/tail623/tail632"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -2, -10.4375)
@@ -12472,7 +12494,7 @@ mesh = SubResource("ArrayMesh_fqh6x")
 skeleton = NodePath("")
 
 [node name="tail223" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails"]
-transform = Transform3D(0.815601, 0.0200195, 0.578268, -3.1665e-08, 0.999401, -0.034599, -0.578614, 0.028219, 0.815113, 0.25, 0.75, 0.4375)
+transform = Transform3D(0.939692, 0.241845, 0.241844, 7.45058e-08, 0.707106, -0.707108, -0.34202, 0.664464, 0.664462, 0.25, 0.75, 0.4375)
 
 [node name="tail222" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail223"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3125, -2.3125, -2.1875)
@@ -12480,7 +12502,7 @@ mesh = SubResource("ArrayMesh_1j56w")
 skeleton = NodePath("")
 
 [node name="tail232" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail223"]
-transform = Transform3D(0.999103, -0.0215039, 0.0364812, 2.8871e-08, 0.861477, 0.507797, -0.0423473, -0.507342, 0.860704, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0.75)
 
 [node name="tail23" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail223/tail232"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3125, -2.3125, -2.9375)
@@ -12488,7 +12510,7 @@ mesh = SubResource("ArrayMesh_c0834")
 skeleton = NodePath("")
 
 [node name="tail242" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail223/tail232"]
-transform = Transform3D(0.999526, -0.0141437, 0.0273283, 0, 0.888106, 0.459638, -0.0307714, -0.45942, 0.887686, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.965925, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0.75)
 
 [node name="tail24" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail223/tail232/tail242"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3125, -2.3125, -3.6875)
@@ -12496,7 +12518,7 @@ mesh = SubResource("ArrayMesh_l4dhg")
 skeleton = NodePath("")
 
 [node name="tail252" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail223/tail232/tail242"]
-transform = Transform3D(0.999869, -0.00821165, 0.0139406, -9.31322e-09, 0.861629, 0.507538, -0.0161794, -0.507472, 0.861516, 0, 0, 1.5)
+transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300705, 0, -0.300705, 0.953717, 0, 0, 1.5)
 
 [node name="tail25" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail223/tail232/tail242/tail252"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3125, -2.3125, -5.1875)
@@ -12504,7 +12526,7 @@ mesh = SubResource("ArrayMesh_m58t2")
 skeleton = NodePath("")
 
 [node name="tail262" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail223/tail232/tail242/tail252"]
-transform = Transform3D(1, -2.43976e-18, 5.92994e-18, 1.86116e-24, 0.924787, 0.380485, -6.41222e-18, -0.380485, 0.924787, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 1.9375)
 
 [node name="tail26" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail223/tail232/tail242/tail252/tail262"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3125, -2.3125, -7.125)
@@ -12512,7 +12534,7 @@ mesh = SubResource("ArrayMesh_dfn3d")
 skeleton = NodePath("")
 
 [node name="tail272" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail223/tail232/tail242/tail252/tail262"]
-transform = Transform3D(0.999869, 0.00805635, -0.014031, 4.19095e-09, 0.867212, 0.49794, 0.0161794, -0.497874, 0.867099, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300705, 0, -0.300705, 0.953718, 0, 0, 1.9375)
 
 [node name="tail27" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail223/tail232/tail242/tail252/tail262/tail272"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3125, -2.3125, -9.0625)
@@ -12520,7 +12542,7 @@ mesh = SubResource("ArrayMesh_0sxk7")
 skeleton = NodePath("")
 
 [node name="tail282" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail223/tail232/tail242/tail252/tail262/tail272"]
-transform = Transform3D(0.999526, 0.000277777, -0.0307703, -2.47382e-10, 0.999959, 0.00902708, 0.0307715, -0.0090228, 0.999486, 0, 0, 1.1875)
+transform = Transform3D(1, 0, 0, 0, 0.984807, -0.173648, 0, 0.173648, 0.984808, 0, 0, 1.1875)
 
 [node name="tail28" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail223/tail232/tail242/tail252/tail262/tail272/tail282"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3125, -2.3125, -10.25)
@@ -12528,7 +12550,7 @@ mesh = SubResource("ArrayMesh_ldd5a")
 skeleton = NodePath("")
 
 [node name="tail502" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails"]
-transform = Transform3D(0.976855, 0.167337, 0.133238, -3.72529e-08, 0.622895, -0.782305, -0.213902, 0.764199, 0.608478, -0.375, 0.75, 0.4375)
+transform = Transform3D(0.939692, -0.241845, -0.241845, -3.72529e-08, 0.707106, -0.707107, 0.34202, 0.664464, 0.664462, -0.375, 0.75, 0.4375)
 
 [node name="tail50" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail502"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3125, -2.3125, -2.1875)
@@ -12536,7 +12558,7 @@ mesh = SubResource("ArrayMesh_6lynj")
 skeleton = NodePath("")
 
 [node name="tail512" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail502"]
-transform = Transform3D(0.999158, -0.0180016, 0.0368631, -1.86264e-08, 0.898581, 0.438809, -0.0410237, -0.43844, 0.897824, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0.75)
 
 [node name="tail51" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail502/tail512"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3125, -2.3125, -2.9375)
@@ -12544,7 +12566,7 @@ mesh = SubResource("ArrayMesh_20a5v")
 skeleton = NodePath("")
 
 [node name="tail523" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail502/tail512"]
-transform = Transform3D(0.999158, -0.0173554, 0.0371716, 2.42144e-08, 0.906102, 0.423058, -0.0410236, -0.422702, 0.905339, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.965925, 0.258818, 0, -0.258819, 0.965925, 0, 0, 0.75)
 
 [node name="tail522" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail502/tail512/tail523"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3125, -2.3125, -3.6875)
@@ -12552,7 +12574,7 @@ mesh = SubResource("ArrayMesh_uynd8")
 skeleton = NodePath("")
 
 [node name="tail532" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail502/tail512/tail523"]
-transform = Transform3D(0.999158, -0.0220252, 0.0346097, -4.65661e-09, 0.843653, 0.536889, -0.0410236, -0.536438, 0.842942, 0, 0, 1.5)
+transform = Transform3D(1, 0, 0, 0, 0.953718, 0.300705, 0, -0.300705, 0.953717, 0, 0, 1.5)
 
 [node name="tail53" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail502/tail512/tail523/tail532"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3125, -2.3125, -5.1875)
@@ -12560,7 +12582,7 @@ mesh = SubResource("ArrayMesh_ved63")
 skeleton = NodePath("")
 
 [node name="tail542" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail502/tail512/tail523/tail532"]
-transform = Transform3D(0.999158, -0.0198712, 0.0358897, -9.31322e-10, 0.874855, 0.484384, -0.0410236, -0.483976, 0.874119, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.984807, 0.173648, 0, -0.173648, 0.984808, 0, 0, 1.9375)
 
 [node name="tail54" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail502/tail512/tail523/tail532/tail542"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3125, -2.3125, -7.125)
@@ -12568,7 +12590,7 @@ mesh = SubResource("ArrayMesh_mgaag")
 skeleton = NodePath("")
 
 [node name="tail552" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail502/tail512/tail523/tail532/tail542"]
-transform = Transform3D(0.999158, -0.0252567, 0.0323271, -2.32831e-08, 0.788011, 0.615662, -0.0410236, -0.615144, 0.787347, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.953718, 0.300705, 0, -0.300705, 0.953717, 0, 0, 1.9375)
 
 [node name="tail55" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail502/tail512/tail523/tail532/tail542/tail552"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3125, -2.3125, -9.0625)
@@ -12576,7 +12598,7 @@ mesh = SubResource("ArrayMesh_jqdi2")
 skeleton = NodePath("")
 
 [node name="tail562" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail502/tail512/tail523/tail532/tail542/tail552"]
-transform = Transform3D(0.999158, -0.0063978, 0.0405216, -9.31322e-09, 0.987764, 0.155954, -0.0410236, -0.155823, 0.986933, 0, 0, 1.1875)
+transform = Transform3D(1, 0, 0, 0, 0.984807, -0.173648, 0, 0.173648, 0.984808, 0, 0, 1.1875)
 
 [node name="tail56" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail502/tail512/tail523/tail532/tail542/tail552/tail562"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3125, -2.3125, -10.25)
@@ -12584,7 +12606,7 @@ mesh = SubResource("ArrayMesh_05v00")
 skeleton = NodePath("")
 
 [node name="tail292" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails"]
-transform = Transform3D(0.943837, -0.055727, -0.325676, 1.02445e-07, 0.985674, -0.16866, 0.330409, 0.159188, 0.930316, 0.125, 0.9375, 0.5625)
+transform = Transform3D(0.984807, 0.122788, 0.122788, -1.04308e-07, 0.707107, -0.707106, -0.173648, 0.696364, 0.696364, 0.125, 0.9375, 0.5625)
 
 [node name="tail29" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail292"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1875, -2.5, -2.3125)
@@ -12592,7 +12614,7 @@ mesh = SubResource("ArrayMesh_525xb")
 skeleton = NodePath("")
 
 [node name="tail302" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail292"]
-transform = Transform3D(0.995045, -0.0252477, 0.0961709, 3.72529e-08, 0.967224, 0.253924, -0.0994298, -0.252666, 0.962431, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 0.75)
 
 [node name="tail30" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail292/tail302"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1875, -2.5, -3.0625)
@@ -12600,7 +12622,7 @@ mesh = SubResource("ArrayMesh_qwvxq")
 skeleton = NodePath("")
 
 [node name="tail312" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail292/tail302"]
-transform = Transform3D(0.995045, -0.0344795, 0.0932601, 1.49012e-08, 0.937949, 0.346772, -0.0994299, -0.345054, 0.933301, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965925, 0, 0, 0.75)
 
 [node name="tail31" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail292/tail302/tail312"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1875, -2.5, -3.8125)
@@ -12608,7 +12630,7 @@ mesh = SubResource("ArrayMesh_5j068")
 skeleton = NodePath("")
 
 [node name="tail323" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail292/tail302/tail312"]
-transform = Transform3D(0.995045, -0.0385146, 0.0916673, 6.51926e-08, 0.92193, 0.387355, -0.0994298, -0.385435, 0.917362, 0, 0, 1.5)
+transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300705, 0, -0.300705, 0.953717, 0, 0, 1.5)
 
 [node name="tail322" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail292/tail302/tail312/tail323"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1875, -2.5, -5.3125)
@@ -12616,7 +12638,7 @@ mesh = SubResource("ArrayMesh_03m6a")
 skeleton = NodePath("")
 
 [node name="tail332" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail292/tail302/tail312/tail323"]
-transform = Transform3D(0.995045, -0.0262203, 0.0959104, -4.19095e-08, 0.964603, 0.263707, -0.0994299, -0.2624, 0.959823, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 1.9375)
 
 [node name="tail33" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail292/tail302/tail312/tail323/tail332"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1875, -2.5, -7.25)
@@ -12624,7 +12646,7 @@ mesh = SubResource("ArrayMesh_wtftj")
 skeleton = NodePath("")
 
 [node name="tail342" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail292/tail302/tail312/tail323/tail332"]
-transform = Transform3D(0.995045, -0.0385146, 0.0916673, 6.51926e-08, 0.92193, 0.387355, -0.0994298, -0.385435, 0.917362, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300705, 0, -0.300705, 0.953717, 0, 0, 1.9375)
 
 [node name="tail34" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail292/tail302/tail312/tail323/tail332/tail342"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1875, -2.5, -9.1875)
@@ -12632,7 +12654,7 @@ mesh = SubResource("ArrayMesh_li0ke")
 skeleton = NodePath("")
 
 [node name="tail352" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail292/tail302/tail312/tail323/tail332/tail342"]
-transform = Transform3D(0.995045, 0.0316475, 0.0942589, -5.58794e-09, 0.947994, -0.318289, -0.0994299, 0.316712, 0.943296, 0, 0, 1.1875)
+transform = Transform3D(1, 0, 0, 0, 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 1.1875)
 
 [node name="tail35" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail292/tail302/tail312/tail323/tail332/tail342/tail352"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1875, -2.5, -10.375)
@@ -12640,7 +12662,7 @@ mesh = SubResource("ArrayMesh_ays3t")
 skeleton = NodePath("")
 
 [node name="tail362" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails"]
-transform = Transform3D(0.568516, -0.295193, -0.767887, -5.81145e-07, 0.933406, -0.358823, 0.822672, 0.203997, 0.530656, -0.25, 0.9375, 0.5625)
+transform = Transform3D(0.984808, -0.122788, -0.122788, 1.49012e-07, 0.707107, -0.707107, 0.173648, 0.696364, 0.696364, -0.25, 0.9375, 0.5625)
 
 [node name="tail36" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail362"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, -2.5, -2.3125)
@@ -12648,7 +12670,7 @@ mesh = SubResource("ArrayMesh_ckw7y")
 skeleton = NodePath("")
 
 [node name="tail372" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail362"]
-transform = Transform3D(0.999103, 0.0188768, -0.0379073, -2.51457e-08, 0.895152, 0.445762, 0.0423473, -0.445362, 0.894349, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.342019, 0, -0.34202, 0.939692, 0, 0, 0.75)
 
 [node name="tail37" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail362/tail372"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, -2.5, -3.0625)
@@ -12656,7 +12678,7 @@ mesh = SubResource("ArrayMesh_ktcs6")
 skeleton = NodePath("")
 
 [node name="tail382" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail362/tail372"]
-transform = Transform3D(0.999526, 0.00796424, -0.0297229, 5.58793e-09, 0.965926, 0.258819, 0.0307714, -0.258697, 0.965468, 0, 0, 0.75)
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0.75)
 
 [node name="tail38" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail362/tail372/tail382"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, -2.5, -3.8125)
@@ -12664,7 +12686,7 @@ mesh = SubResource("ArrayMesh_hxqd6")
 skeleton = NodePath("")
 
 [node name="tail392" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail362/tail372/tail382"]
-transform = Transform3D(0.999869, 0.00552629, -0.0152064, -3.0268e-09, 0.939859, 0.341563, 0.0161794, -0.341518, 0.939736, 0, 0, 1.5)
+transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300705, 0, -0.300705, 0.953717, 0, 0, 1.5)
 
 [node name="tail39" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail362/tail372/tail382/tail392"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, -2.5, -5.3125)
@@ -12672,7 +12694,7 @@ mesh = SubResource("ArrayMesh_ajuoa")
 skeleton = NodePath("")
 
 [node name="tail402" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail362/tail372/tail382/tail392"]
-transform = Transform3D(1, 1.62741e-18, -6.20229e-18, 2.58494e-24, 0.967258, 0.253797, 6.41224e-18, -0.253797, 0.967258, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 0, 1.9375)
 
 [node name="tail40" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail362/tail372/tail382/tail392/tail402"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, -2.5, -7.25)
@@ -12680,7 +12702,7 @@ mesh = SubResource("ArrayMesh_r1y2r")
 skeleton = NodePath("")
 
 [node name="tail412" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail362/tail372/tail382/tail392/tail402"]
-transform = Transform3D(0.999869, -0.00486524, 0.0154306, 3.72529e-09, 0.953717, 0.300705, -0.0161794, -0.300666, 0.953592, 0, 0, 1.9375)
+transform = Transform3D(1, 0, 0, 0, 0.953717, 0.300705, 0, -0.300705, 0.953717, 0, 0, 1.9375)
 
 [node name="tail41" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail362/tail372/tail382/tail392/tail402/tail412"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, -2.5, -9.1875)
@@ -12688,7 +12710,7 @@ mesh = SubResource("ArrayMesh_n56xj")
 skeleton = NodePath("")
 
 [node name="tail423" type="Node3D" parent="blockbench_export/Node/root/body3/body22/tails/tail362/tail372/tail382/tail392/tail402/tail412"]
-transform = Transform3D(0.999526, 0.00664557, 0.0300453, -1.74623e-08, 0.976401, -0.215964, -0.0307715, 0.215862, 0.975938, 0, 0, 1.1875)
+transform = Transform3D(1, 0, 0, 0, 0.984807, -0.173648, 0, 0.173648, 0.984807, 0, 0, 1.1875)
 
 [node name="tail422" type="MeshInstance3D" parent="blockbench_export/Node/root/body3/body22/tails/tail362/tail372/tail382/tail392/tail402/tail412/tail423"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1875, -2.5, -10.375)
@@ -12704,3 +12726,8 @@ autoplay = "attack2"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42486, 0.526001)
 shape = SubResource("BoxShape3D_6o2e0")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[connection signal="body_entered" from="blockbench_export/Node/root/body3/neck2/head27/head25/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
